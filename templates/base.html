@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Insights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href = "/static/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Discover Your Personality Type</h1>
+        <p>Professional MBTI Assessment with AI-Driven Insights</p>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}">About MBTI</a></li>
+            <li><a href="{{ url_for('home') }}">Personality Types</a></li>
+            <li><a href="{{ url_for('chat_interface') }}">ChatBox</a></li>
+            <li><a href="{{ url_for('aboutUs') }}">About Us</a></li>
+        </ul>
+    </nav>
+
+   {% block body %}
+        
+    {% endblock body %}
+
+    <footer>
+        <p>&copy 2025 Personality Insights. All rights reserved.</p>
+        <p>Professional Psychological Assessment Platform</p>
+    </footer>
+</body>
+</html>

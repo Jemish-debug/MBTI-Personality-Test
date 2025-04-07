@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="evaluation-container">
+    <h2>Model Evaluation Report</h2>
+    
+    <div class="accuracy-badge">
+        Overall Accuracy: {{ "%.2f"|format(accuracy * 100) }}%
+    </div>
+
+    <div class="confusion-matrix">
+        <h3>Confusion Matrix</h3>
+        <img src="{{ url_for('static', filename=confusion_matrix) }}" 
+             alt="Confusion Matrix">
+    </div>
+
+    <div class="metric-graphs">
+        <h3>Class Performance Metrics</h3>
+        <img src="{{ url_for('static', filename='images/class_metrics.png') }}" 
+             alt="Class Metrics">
+    </div>
+
+    {% if feature_importance %}
+    <div class="feature-importance">
+        <h3>Feature Importance Analysis</h3>
+        <img src="{{ url_for('static', filename=feature_importance) }}" 
+             alt="Feature Importance">
+    </div>
+    {% endif %}
+
+    <div class="classification-report">
+        <h3>Detailed Metrics</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Precision</th>
+                    <th>Recall</th>
+                    <th>F1-Score</th>
+                    <th>Support</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for metric in class_report %}
+                <tr>
+                    <td>{{ metric.type }}</td>
+                    <td>{{ "%.2f"|format(metric.precision) }}</td>
+                    <td>{{ "%.2f"|format(metric.recall) }}</td>
+                    <td>{{ "%.2f"|format(metric.f1) }}</td>
+                    <td>{{ metric.support }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock body %}

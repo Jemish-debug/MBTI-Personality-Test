@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block body %}
+
+    <div class="container">
+        <div class="evaluation-container">
+            <div class="chat-interface">
+                <div class="chat-history">
+                    {% for message in messages %}
+                    <div class="message-card {{ 'user-message' if message.is_user else 'ai-message' }}">
+                        <div class="message-content">
+                            {{ message.text }}
+                        </div>
+                        <div class="message-meta">
+                            {{ 'You' if message.is_user else 'MBTI AI' }} • 
+                            {{ message.timestamp }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <form method="POST" class="prediction-form">
+                    <div class="input-group">
+                        <textarea name="user_input" 
+                                  placeholder="Describe yourself or share your thoughts..." 
+                                  required></textarea>
+                        <button type="submit">Send your thoughts</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock body %}

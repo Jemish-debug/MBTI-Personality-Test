@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #3498db;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.cta-button {
+    background: #e74c3c;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.mbti-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.mbti-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.type-card {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+/* Personality Gallery Section */
+.personality-gallery {
+    margin: 4rem 0;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.personality-gallery h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 2.2rem;
+}
+
+.personality-grid {
+    display: grid;
+    place-items: center; /* Centers content both vertically and horizontally */
+    min-height: 400px;
+    padding: 2rem;
+}
+
+.personality-grid img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.personality-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .personality-grid {
+        padding: 1rem;
+        min-height: 300px;
+    }
+    
+    .personality-gallery h2 {
+        font-size: 1.8rem;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.2rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.prediction-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    margin-top: 2rem;
+}
+
+.prediction-form textarea {
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    margin: 1rem 0;
+    resize: vertical;
+    font-size: 1rem;
+}
+
+.prediction-form button {
+    background: #e74c3c;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.prediction-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.result-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    margin-top: 2rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.type-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin: 1rem 0;
+    color: #4a5568;
+}
+
+.type-details {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+
+.type-details h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.type-details ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.type-details li {
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.type-details li::before {
+    content: "•";
+    color: #3498db;
+    position: absolute;
+    left: -1.2rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+.evaluation-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.accuracy-badge {
+    background: #3498db;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+}
+
+.confusion-matrix img,
+.metric-graphs img,
+.feature-importance img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.classification-report table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.classification-report th,
+.classification-report td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.classification-report th {
+    background: #f8f9fa;
+}
+
+.classification-report tr:hover {
+    background: #f5f5f5;
+}
+
+.feature-importance {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .evaluation-container {
+        padding: 1rem;
+    }
+    
+    .classification-report table {
+        font-size: 0.9rem;
+    }
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ===== Chat Interface Styles ===== */
+.chat-interface {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.chat-history {
+    height: 60vh;
+    padding: 2rem;
+    overflow-y: auto;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.message-card {
+    max-width: 75%;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 15px;
+    animation: fadeIn 0.4s ease;
+    position: relative;
+}
+
+.user-message {
+    background: #3498db;
+    color: white;
+    margin-left: auto;
+}
+
+.ai-message {
+    background: #ffffff;
+    color: #2c3e50;
+    border: 1px solid #e0e0e0;
+    margin-right: auto;
+}
+
+.message-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.message-meta {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    text-align: right;
+}
+
+.prediction-form textarea {
+    height: 120px;
+    border: none;
+    border-radius: 0;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.prediction-form textarea:focus {
+    background: white;
+    box-shadow: none;
+}
+
+.prediction-form button {
+    border-radius: 0;
+    background: #2c3e50;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.prediction-form button:hover {
+    background: #3498db;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .chat-history {
+        height: 65vh;
+        padding: 1rem;
+    }
+    
+    .message-card {
+        max-width: 90%;
+        padding: 1rem;
+    }
+    
+    .prediction-form textarea {
+        height: 100px;
+    }
+}
+
+/* About Page Styles */
+.team-section {
+    padding: 4rem 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.team-member {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 3px solid #3498db;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.position {
+    color: #3498db;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    color: #2c3e50;
+}
+
+.social-links {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #3498db;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        gap: 2rem;
+    }
+    
+    .team-member {
+        padding: 1.5rem;
+    }
+}

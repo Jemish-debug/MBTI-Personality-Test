@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block body %}
+        
+    
+
+    <div class="container">
+        <section class="hero">
+            <h1>Understand Yourself Better</h1>
+            <p>Take our scientifically validated personality assessment to discover your Myers-Briggs Type Indicator (MBTI)</p>
+            <a href="{{ url_for('predictPersonality') }}" class="cta-button">Start Free Assessment →</a><br>
+            <a href="{{ url_for('evaluation_page') }}" class="cta-button">Model Analysis →</a>
+        </section>
+
+        <section class="features" id="features">
+            <div class="feature-card">
+                <i class="fas fa-brain"></i>
+                <h3>Scientific Validation</h3>
+                <p>Based on Carl Jung's theory of psychological types</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-pie"></i>
+                <h3>Detailed Analysis</h3>
+                <p>Comprehensive personality breakdown with statistics</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-lock"></i>
+                <h3>Secure & Private</h3>
+                <p>Your data remains completely confidential</p>
+            </div>
+        </section>
+
+        <section class="mbti-info" id="about">
+            <h2>What is the MBTI?</h2>
+            <p>The Myers-Briggs Type Indicator (MBTI) is a personality assessment that categorizes individuals into 16 distinct personality types based on four key dichotomies:</p>
+            
+            <div class="mbti-types" id="types">
+                <div class="type-card">
+                    <h4>Extraversion (E) vs Introversion (I)</h4>
+                    <p>How you interact with the world</p>
+                </div>
+                <div class="type-card">
+                    <h4>Sensing (S) vs Intuition (N)</h4>
+                    <p>How you process information</p>
+                </div>
+                <div class="type-card">
+                    <h4>Thinking (T) vs Feeling (F)</h4>
+                    <p>How you make decisions</p>
+                </div>
+                <div class="type-card">
+                    <h4>Judging (J) vs Perceiving (P)</h4>
+                    <p>How you organize your life</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="personality-gallery">
+            <h2>16 Personality Types</h2>
+            <div class="personality-grid">
+                <img src="{{ url_for('static', filename='photos/dataset-cover.png') }}" alt="16 Personality Types">
+            </div>
+        </section>
+    </div>
+{% endblock body %}
