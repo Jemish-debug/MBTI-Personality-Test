@@ -11,16 +11,17 @@ mbti-personality-prediction/
 ├── evaluate.py
 ├── train.csv
 ├── models/
-│ └── mbti_svm_model.pkl
+│   └── mbti_svm_model.pkl
 ├── templates/
-│ └── index.html
+│   └── index.html
 ├── static/
-│ └── images/
-│ ├── confusion_matrix.png
-│ ├── class_metrics.png
-│ └── feature_importance.png
+│   └── images/
+│       ├── confusion_matrix.png
+│       ├── class_metrics.png
+│       └── feature_importance.png
 ├── README.md
 ├── requirements.txt
+
 
 
 ## 📊 Dataset
