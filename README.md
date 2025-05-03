@@ -4,23 +4,7 @@
 
 This project presents a machine learning-based approach to predict Myers-Briggs Type Indicator (MBTI) personality types from textual data. Utilizing a Support Vector Machine (SVM) classifier with a linear kernel and TF-IDF feature extraction, the model classifies user-generated text into one of the 16 MBTI personality types. The application is deployed as a Flask web app, providing users with an interactive platform to assess personality types based on their text inputs.
 
-## 📂 Project Structure
 
-mbti-personality-prediction/
-├── app.py
-├── evaluate.py
-├── train.csv
-├── models/
-│   └── mbti_svm_model.pkl
-├── templates/
-│   └── index.html
-├── static/
-│   └── images/
-│       ├── confusion_matrix.png
-│       ├── class_metrics.png
-│       └── feature_importance.png
-├── README.md
-├── requirements.txt
 
 
 
