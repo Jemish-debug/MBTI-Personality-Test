@@ -1,5 +1,4 @@
 # app.py
-# AIzaSyDAt2ENsSi2y5vWCNHDpHk_7Yb0Y34WZ3Q
 from flask import Flask, render_template, request, session, redirect, url_for
 import joblib
 import re
@@ -12,7 +11,7 @@ import evaluate
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
-GEMINI_API_KEY = "AIzaSyDAt2ENsSi2y5vWCNHDpHk_7Yb0Y34WZ3Q"
+GEMINI_API_KEY = "YOUR_API_KEY"
 genai.configure(api_key=GEMINI_API_KEY)
 
 # Initialize the generative model for chat responses
