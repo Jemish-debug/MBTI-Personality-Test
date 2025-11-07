@@ -2,6 +2,16 @@
 
 This project predicts **Myers–Briggs Type Indicator (MBTI)** personality types based on user-provided text input using **classical machine learning** techniques. The application features a clean web interface built with **Flask**, a **Support Vector Machine (SVM)** model for text classification, and an additional **integrated chatbot** for interactive engagement and fun.
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" />
+  <img src="https://img.shields.io/badge/Framework-Flask-red.svg" />
+  <img src="https://img.shields.io/badge/Model-SVM-yellow.svg" />
+  <img src="https://img.shields.io/badge/Feature%20Extraction-TF--IDF-green.svg" />
+  <img src="https://img.shields.io/badge/Chatbot-Gemini%20AI-purple.svg" />
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg" />
+</p>
+
+
 ## 🌟 Features
 
 - Predicts one of **16 MBTI personality types** from text input.
