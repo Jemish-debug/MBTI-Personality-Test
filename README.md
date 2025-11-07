@@ -1,59 +1,94 @@
-# MBTI Personality Prediction using Machine Learning
+# MBTI Personality Prediction Web Application
 
-## 🧠 Overview
+This project predicts **Myers–Briggs Type Indicator (MBTI)** personality types based on user-provided text input using **classical machine learning** techniques. The application features a clean web interface built with **Flask**, a **Support Vector Machine (SVM)** model for text classification, and an additional **integrated chatbot** for interactive engagement and fun.
 
-This project presents a machine learning-based approach to predict Myers-Briggs Type Indicator (MBTI) personality types from textual data. Utilizing a Support Vector Machine (SVM) classifier with a linear kernel and TF-IDF feature extraction, the model classifies user-generated text into one of the 16 MBTI personality types. The application is deployed as a Flask web app, providing users with an interactive platform to assess personality types based on their text inputs.
+## 🌟 Features
 
+- Predicts one of **16 MBTI personality types** from text input.
+- Uses **TF-IDF** + **SVM** for efficient and interpretable text classification.
+- Simple and user-friendly **Flask web interface** for real-time predictions.
+- **Integrated chatbot** powered by Google Gemini for conversational interaction.
+- Includes visual evaluation metrics:
+  - Confusion Matrix
+  - Class-wise Precision/Recall/F1
+  - Feature Importance Plots
 
+## 🧠 How It Works
 
+1. The user enters text describing their thoughts or writing style.
+2. The input text is cleaned and converted into TF-IDF vectors.
+3. An SVM classifier predicts the MBTI type.
+4. The result is displayed along with personality interpretation.
+5. Users can also open the **Chatbox** page to interact with the built-in chatbot.
 
+## 🤖 Chatbot Feature
 
-## 📊 Dataset
+The project includes a **lightweight chatbot** for interactive fun and conversation:
+- Accessible via `/chatbox`
+- Powered by **Google Generative AI (Gemini)**
+- Supports open conversational queries
 
-- **Source**: The dataset comprises 8,675 entries, each containing a user's MBTI type and their corresponding textual posts.
-- **Features**:
-  - `type`: MBTI personality type (e.g., INFP, ESTJ).
-  - `posts`: Aggregated textual posts from users.
+This chatbot is **separate** from the MBTI model and does not influence predictions.
 
-## 🛠️ Methodology
+## 🛠️ Tech Stack
 
-### 1. Data Preprocessing
+**Python, Flask, scikit-learn, pandas, NumPy, joblib, matplotlib, seaborn, Google Generative AI**
 
-- **Text Cleaning**:
-  - Lowercasing text.
-  - Removing URLs, special characters, and numbers.
-  - Eliminating extra spaces.
-  - Removing stopwords using NLTK.
-  - Lemmatization to reduce words to their base forms.
+## 📂 Project Structure
 
-### 2. Feature Extraction
-
-- **TF-IDF Vectorization**: Converts textual data into numerical features based on term frequency-inverse document frequency.
-- **Additional Features**: Incorporates text length as an additional feature.
-
-### 3. Model Training
-
-- **Algorithm**: Support Vector Machine (SVM) with a linear kernel.
-- **Training**: The model is trained on the preprocessed TF-IDF features.
-- **Evaluation**:
-  - Classification report (precision, recall, F1-score).
-  - Confusion matrix.
-  - Feature importance analysis.
-
-### 4. Web Application
-
-- **Framework**: Flask.
-- **Functionality**:
-  - User inputs text data.
-  - The model predicts the MBTI personality type.
-  - Displays evaluation metrics and visualizations.
+```
+mbti-personality-prediction/
+├── app.py
+├── evaluate.py
+├── train.csv
+├── models/
+│   └── mbti_svm_model.pkl
+├── templates/
+│   ├── index.html
+│   └── chatbox.html
+├── static/
+│   └── images/
+│       ├── confusion_matrix.png
+│       ├── class_metrics.png
+│       └── feature_importance.png
+├── requirements.txt
+├── README.md
+```
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### 1) Clone the Repository
+```bash
+git clone <your-repo-url>
+cd mbti-personality-prediction
+```
 
-Ensure you have the following installed:
+### 2) Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-- Python 3.x
-- pip (Python package installer)
+### 3) Run the App
+```bash
+python app.py
+```
 
+### 4) Open in Browser
+```
+http://localhost:5000
+```
+
+## 🎯 Future Enhancements
+
+- UI/UX improvements
+- Larger dataset for better prediction accuracy
+- Support for multiple languages
+- Option for long-form personality analysis
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## 📝 License
+
+This project is licensed under the **MIT License**.
